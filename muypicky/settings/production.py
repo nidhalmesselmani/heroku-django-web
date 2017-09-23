@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','tzmk$us74k)rtp45$l$)eck0xt9^3cwll^bdl(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://django-heroku-web.herokuapp.com','django-heroku-web.herokuapp.com']
+ALLOWED_HOSTS = ['https://django-heroku-web.herokuapp.com/','django-heroku-web.herokuapp.com']
 
 
 # Application definition
