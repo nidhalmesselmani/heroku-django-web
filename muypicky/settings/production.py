@@ -17,8 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-PROJECT_DIR = os.path.join(PROJECT_ROOT,'/')
+
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='nidhalmesselmani@yahoo.fr'
@@ -137,16 +136,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_ROOT= os.path.join(BASE_DIR,'static_root')
+
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, 'static'),
-]
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
