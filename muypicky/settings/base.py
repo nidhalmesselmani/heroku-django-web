@@ -14,7 +14,17 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='nidhalmesselmani@yahoo.fr'
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'your name <nidhalmesselmani@yahoo.fr>'
 
+ADMINS = (
+    ('You','nidhalmesselmani@yahoo.fr')
+    )
+MANAGERS = ADMINS
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
