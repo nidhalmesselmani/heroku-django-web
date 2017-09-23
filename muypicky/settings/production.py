@@ -32,7 +32,7 @@ MANAGERS = ADMINS
 SECRET_KEY = os.environ.get('SECRET_KEY','tzmk$us74k)rtp45$l$)eck0xt9^3cwll^bdl(w!ki=t8u34@g')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://django-heroku-web.herokuapp.com/','django-heroku-web.herokuapp.com']
 
@@ -133,10 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
+
 
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
