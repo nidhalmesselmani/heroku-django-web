@@ -1,4 +1,4 @@
-muypicky/setting/local.py
+muypicky/settings/local2.py
 *.py[cod]
 db.sqlite3
 .DS_Store
