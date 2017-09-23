@@ -14,6 +14,12 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+PROJECT_DIR = os.path.join(PROJECT_ROOT,'/')
+
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='nidhalmesselmani@yahoo.fr'
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
@@ -32,7 +38,7 @@ MANAGERS = ADMINS
 SECRET_KEY = os.environ.get('SECRET_KEY','tzmk$us74k)rtp45$l$)eck0xt9^3cwll^bdl(w!ki=t8u34@g')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://django-heroku-web.herokuapp.com/','django-heroku-web.herokuapp.com']
 
@@ -131,9 +137,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+STATIC_ROOT= os.path.join(PROJECT_DIR,'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = ()
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
