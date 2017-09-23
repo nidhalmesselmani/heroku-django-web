@@ -18,7 +18,8 @@ from django.contrib import admin
 from .views import hello_world
 
 urlpatterns = [
+ url(r'^$', hello_world),
     url(r'^admin/', admin.site.urls),
-    url(r'^$/', hello_world),
+   
 ]
-]
+
